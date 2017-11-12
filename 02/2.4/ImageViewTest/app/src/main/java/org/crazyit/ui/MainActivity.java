@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -74,6 +75,12 @@ public class MainActivity extends Activity
 		// 为两个按钮添加监听器
 		plus.setOnClickListener(listener);
 		minus.setOnClickListener(listener);
+		image1.setOnGenericMotionListener(new View.OnGenericMotionListener() {
+			@Override
+			public boolean onGenericMotion(View view, MotionEvent motionEvent) {
+				return false;
+			}
+		});
 		image1.setOnTouchListener(new View.OnTouchListener()
 		{
 			@Override
