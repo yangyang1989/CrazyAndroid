@@ -15,7 +15,7 @@ public class MainActivity extends ListActivity
 	{
 		super.onCreate(savedInstanceState);
 		// 无须使用布局文件
-		String[] arr = { "孙悟空", "猪八戒", "唐僧" };
+		String[] arr = { "孙悟空", "猪八戒", "唐僧", "沙和尚" };
 		// 创建ArrayAdapter对象
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
 				android.R.layout.simple_list_item_multiple_choice, arr);
