@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.Toast;
+
+import java.util.Set;
 
 
 public class MainActivity extends Activity
@@ -35,6 +38,8 @@ public class MainActivity extends Activity
 				startActivity(intent);
 			}
 		});
+		Set<String> cates = getIntent().getCategories();
+		Toast.makeText(this, cates.toString(), Toast.LENGTH_LONG).show();
 	}
 }
 

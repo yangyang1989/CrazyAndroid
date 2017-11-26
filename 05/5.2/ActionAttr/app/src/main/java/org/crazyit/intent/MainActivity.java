@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.Toast;
 
 
 public class MainActivity extends Activity
@@ -27,10 +28,13 @@ public class MainActivity extends Activity
 				// 创建Intent对象
 				Intent intent = new Intent();
 				// 为Intent设置Action属性（属性值就是一个普通字符串）
-				intent.setAction(MainActivity.CRAZYIT_ACTION);
+				intent.setAction(CRAZYIT_ACTION);
 				startActivity(intent);
 			}
 		});
+
+		String action = getIntent().getAction();
+		Toast.makeText(this, action, Toast.LENGTH_LONG).show();
 	}
 }
 
